@@ -16,7 +16,7 @@ require_once '../model/Mahasiswa.php';
 	</div>
 	<h2 style="text-align: center;">Mahasiswa</h2>
 
-	<form action="simpanubah.php" method="post">
+	<form action="simpan.php" method="post">
 		<label>Nama</label>
 		<input type="text" name="nama" required>
 		<br>

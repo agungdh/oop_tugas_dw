@@ -19,7 +19,7 @@ $mahasiswa = $objectMahasiswa->cari($_GET['id']);
 	</div>
 	<h2 style="text-align: center;">Mahasiswa</h2>
 
-	<form action="simpan.php" method="post">
+	<form action="simpanubah.php" method="post">
 		<input type="hidden" name="id" value="<?php echo $mahasiswa['id']; ?>">
 
 		<label>Nama</label>
