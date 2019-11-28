@@ -1,41 +1,29 @@
 <?php
-require_once '../model/Mahasiswa.php';
+require_once '../model/ProgramStudi.php';
 
-$objectMahasiswa = new Mahasiswa();
-$mahasiswa = $objectMahasiswa->cari($_GET['id']);
+$objectProgramStudi = new ProgramStudi();
+$programStudi = $objectProgramStudi->cari($_GET['id']);
 ?>
 
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Mahasiswa</title>
+	<title>Program Studi</title>
 </head>
 <body>
 	<div style="text-align: center;">
-		<b><a href="tabel.php">Mahasiswa</a></b>
+		<b><a href="tabel.php">programStudi</a></b>
 		<a href="">Siswa</a>
 		<a href="">Benda</a>
 		<a href="">Program Studi</a>
 	</div>
-	<h2 style="text-align: center;">Mahasiswa</h2>
+	<h2 style="text-align: center;">Program Studi</h2>
 
 	<form action="simpanubah.php" method="post">
-		<input type="hidden" name="id" value="<?php echo $mahasiswa['id']; ?>">
+		<input type="hidden" name="id" value="<?php echo $programStudi['id']; ?>">
 
-		<label>Nama</label>
-		<input type="text" name="nama" required value="<?php echo $mahasiswa['nama']; ?>">
-		<br>
-
-		<label>NPM</label>
-		<input type="number" name="npm" required value="<?php echo $mahasiswa['npm']; ?>">
-		<br>
-
-		<label>Tanggal Lahir</label>
-		<input type="date" name="tanggal_lahir" required value="<?php echo $mahasiswa['tanggal_lahir']; ?>">
-		<br>
-
-		<label>Alamat</label>
-		<textarea name="alamat" required><?php echo $mahasiswa['alamat']; ?></textarea>
+		<label>Program Studi</label>
+		<input type="text" name="program_studi" required value="<?php echo $programStudi['program_studi']; ?>">
 		<br>
 
 		<input type="submit" value="Simpan">

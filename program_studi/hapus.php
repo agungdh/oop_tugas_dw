@@ -1,8 +1,8 @@
 <?php
-require_once '../model/Mahasiswa.php';
+require_once '../model/ProgramStudi.php';
 
-$mahasiswa = new Mahasiswa();
-$mahasiswa->cari($_GET['id']);
-$mahasiswa->hapus();
+$programStudi = new ProgramStudi();
+$programStudi->cari($_GET['id']);
+$programStudi->hapus();
 
 header("Location: tabel.php");

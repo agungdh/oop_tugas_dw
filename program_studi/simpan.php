@@ -1,11 +1,8 @@
 <?php
-require_once '../model/Mahasiswa.php';
+require_once '../model/ProgramStudi.php';
 
-$mahasiswa = new Mahasiswa();
-$mahasiswa->nama = $_POST['nama'];
-$mahasiswa->npm = $_POST['npm'];
-$mahasiswa->tanggal_lahir = $_POST['tanggal_lahir'];
-$mahasiswa->alamat = $_POST['alamat'];
-$mahasiswa->simpan();
+$programStudi = new ProgramStudi();
+$programStudi->program_studi = $_POST['program_studi'];
+$programStudi->simpan();
 
 header("Location: tabel.php");

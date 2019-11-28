@@ -1,46 +1,40 @@
 <?php
-require_once '../model/Mahasiswa.php';
+require_once '../model/ProgramStudi.php';
 
-$objMahasiswa = new Mahasiswa();
+$objMahasiswa = new ProgramStudi();
 $mahasiswas = $objMahasiswa->ambilSemuaData();
 ?>
 
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Mahasiswa</title>
+	<title>Program Studi</title>
 </head>
 <body>
 	<div style="text-align: center;">
-		<b><a href="tabel.php">Mahasiswa</a></b>
+		<b><a href="tabel.php">programStudi</a></b>
 		<a href="">Siswa</a>
 		<a href="">Benda</a>
 		<a href="">Program Studi</a>
 	</div>
-	<h2 style="text-align: center;">Mahasiswa</h2>
+	<h2 style="text-align: center;">Program Studi</h2>
 	<a href="tambah.php">Tambah</a>
 	<table border="1" style="width: 100%">
 		<thead>
 			<tr>
-				<th>Nama</th>
-				<th>NPM</th>
-				<th>Tanggal Lahir</th>
-				<th>Alamat</th>
+				<th>Program Studi</th>
 				<th>Aksi</th>
 			</tr>
 		</thead>
 		<tbody>
 			<?php
-			foreach ($mahasiswas as $mahasiswa) {
+			foreach ($mahasiswas as $programStudi) {
 				?>
 				<tr>
-					<td><?php echo $mahasiswa['nama']; ?></td>
-					<td><?php echo $mahasiswa['npm']; ?></td>
-					<td><?php echo date("d-m-Y", strtotime($mahasiswa['tanggal_lahir'])); ?></td>
-					<td><?php echo $mahasiswa['alamat']; ?></td>
+					<td><?php echo $programStudi['program_studi']; ?></td>
 					<td>
-						<a href="ubah.php?id=<?php echo $mahasiswa['id']; ?>">Ubah</a>
-						<a href="hapus.php?id=<?php echo $mahasiswa['id']; ?>">Hapus</a>
+						<a href="ubah.php?id=<?php echo $programStudi['id']; ?>">Ubah</a>
+						<a href="hapus.php?id=<?php echo $programStudi['id']; ?>">Hapus</a>
 					</td>
 				</tr>
 				<?php
