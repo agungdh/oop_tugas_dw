@@ -12,10 +12,10 @@ $programStudi = $objectProgramStudi->cari($_GET['id']);
 </head>
 <body>
 	<div style="text-align: center;">
-		<b><a href="tabel.php">programStudi</a></b>
-		<a href="">Siswa</a>
-		<a href="">Benda</a>
-		<a href="">Program Studi</a>
+		<a href="../mahasiswa/tabel.php">Mahasiswa</a>
+		<a href="../siswa/tabel.php">Siswa</a>
+		<a href="../benda/tabel.php">Benda</a>
+		<b><a href="tabel.php">Program Studi</a></b>
 	</div>
 	<h2 style="text-align: center;">Program Studi</h2>
 

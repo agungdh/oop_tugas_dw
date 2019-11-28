@@ -1,8 +1,8 @@
 <?php
 require_once '../model/ProgramStudi.php';
 
-$objMahasiswa = new ProgramStudi();
-$mahasiswas = $objMahasiswa->ambilSemuaData();
+$objProgramStudi = new ProgramStudi();
+$programStudis = $objProgramStudi->ambilSemuaData();
 ?>
 
 <!DOCTYPE html>
@@ -12,10 +12,10 @@ $mahasiswas = $objMahasiswa->ambilSemuaData();
 </head>
 <body>
 	<div style="text-align: center;">
-		<b><a href="tabel.php">programStudi</a></b>
-		<a href="">Siswa</a>
-		<a href="">Benda</a>
-		<a href="">Program Studi</a>
+		<a href="../mahasiswa/tabel.php">Mahasiswa</a>
+		<a href="../siswa/tabel.php">Siswa</a>
+		<a href="../benda/tabel.php">Benda</a>
+		<b><a href="tabel.php">Program Studi</a></b>
 	</div>
 	<h2 style="text-align: center;">Program Studi</h2>
 	<a href="tambah.php">Tambah</a>
@@ -28,7 +28,7 @@ $mahasiswas = $objMahasiswa->ambilSemuaData();
 		</thead>
 		<tbody>
 			<?php
-			foreach ($mahasiswas as $programStudi) {
+			foreach ($programStudis as $programStudi) {
 				?>
 				<tr>
 					<td><?php echo $programStudi['program_studi']; ?></td>

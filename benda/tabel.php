@@ -1,8 +1,8 @@
 <?php
 require_once '../model/Benda.php';
 
-$objMahasiswa = new Benda();
-$mahasiswas = $objMahasiswa->ambilSemuaData();
+$objBenda = new Benda();
+$bendas = $objBenda->ambilSemuaData();
 ?>
 
 <!DOCTYPE html>
@@ -12,10 +12,10 @@ $mahasiswas = $objMahasiswa->ambilSemuaData();
 </head>
 <body>
 	<div style="text-align: center;">
-		<b><a href="tabel.php">Mahasiswa</a></b>
-		<a href="">Siswa</a>
-		<a href="">Benda</a>
-		<a href="">Program Studi</a>
+		<a href="../mahasiswa/tabel.php">Mahasiswa</a>
+		<a href="../siswa/tabel.php">Siswa</a>
+		<b><a href="tabel.php">Benda</a></b>
+		<a href="../program_studi/tabel.php">Program Studi</a>
 	</div>
 	<h2 style="text-align: center;">Benda</h2>
 	<a href="tambah.php">Tambah</a>
@@ -28,7 +28,7 @@ $mahasiswas = $objMahasiswa->ambilSemuaData();
 		</thead>
 		<tbody>
 			<?php
-			foreach ($mahasiswas as $benda) {
+			foreach ($bendas as $benda) {
 				?>
 				<tr>
 					<td><?php echo $benda['benda']; ?></td>

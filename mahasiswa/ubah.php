@@ -13,9 +13,9 @@ $mahasiswa = $objectMahasiswa->cari($_GET['id']);
 <body>
 	<div style="text-align: center;">
 		<b><a href="tabel.php">Mahasiswa</a></b>
-		<a href="">Siswa</a>
-		<a href="">Benda</a>
-		<a href="">Program Studi</a>
+		<a href="../siswa/tabel.php">Siswa</a>
+		<a href="../benda/tabel.php">Benda</a>
+		<a href="../program_studi/tabel.php">Program Studi</a>
 	</div>
 	<h2 style="text-align: center;">Mahasiswa</h2>
 
