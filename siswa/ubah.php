@@ -1,8 +1,8 @@
 <?php
 require_once '../model/Siswa.php';
 
-$objectMahasiswa = new Siswa();
-$siswa = $objectMahasiswa->cari($_GET['id']);
+$objSiswa = new Siswa();
+$siswa = $objSiswa->cari($_GET['id']);
 ?>
 
 <!DOCTYPE html>
@@ -12,10 +12,10 @@ $siswa = $objectMahasiswa->cari($_GET['id']);
 </head>
 <body>
 	<div style="text-align: center;">
-		<b><a href="tabel.php">Mahasiswa</a></b>
-		<a href="">Siswa</a>
-		<a href="">Benda</a>
-		<a href="">Program Studi</a>
+		<a href="../mahasiswa/tabel.php">Mahasiswa</a>
+		<b><a href="tabel.php">Siswa</a></b>
+		<a href="../benda/tabel.php">Benda</a>
+		<a href="../program_studi/tabel.php">Program Studi</a>
 	</div>
 	<h2 style="text-align: center;">Siswa</h2>
 

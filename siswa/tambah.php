@@ -9,10 +9,10 @@ require_once '../model/Siswa.php';
 </head>
 <body>
 	<div style="text-align: center;">
+		<a href="../mahasiswa/tabel.php">Mahasiswa</a>
 		<b><a href="tabel.php">Siswa</a></b>
-		<a href="">Siswa</a>
-		<a href="">Benda</a>
-		<a href="">Program Studi</a>
+		<a href="../benda/tabel.php">Benda</a>
+		<a href="../program_studi/tabel.php">Program Studi</a>
 	</div>
 	<h2 style="text-align: center;">Siswa</h2>
 
