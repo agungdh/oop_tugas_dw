@@ -1,6 +1,6 @@
 <?php
 
-require 'Model.php';
+require_once '../model/Model.php';
 
 class Mahasiswa Extends Model
 {
@@ -28,11 +28,3 @@ class Mahasiswa Extends Model
 	}
 
 }
-
-$a = new Mahasiswa();
-// $a->cari(1);
-$a->nama = "Agun'\nssgDH";
-$a->npm = '15753003';
-$a->tanggal_lahir = '1997-03-25';
-$a->alamat = 'Nungga"lrejo';
-var_dump($a->simpan());

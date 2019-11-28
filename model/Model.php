@@ -1,6 +1,6 @@
 <?php
 
-require '../config/Database.php';
+require_once '../config/Database.php';
 
 class Model
 {
@@ -20,7 +20,7 @@ class Model
 
 	public function ambilSemuaData()
 	{
-		return mysqli_fetch_all($this->_koneksi->query("SELECT * FROM " . $this->_tabel));
+		return mysqli_fetch_all($this->_koneksi->query("SELECT * FROM " . $this->_tabel), MYSQLI_ASSOC);
 	}	
 
 	public function _simpan()
