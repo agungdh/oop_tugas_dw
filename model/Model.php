@@ -60,8 +60,8 @@ class Model
 		return $data;
 	}	
 
-	public function hapus($id)
+	public function hapus()
 	{
-		return $this->_koneksi->query("DELETE FROM " . $this->_tabel . " WHERE id = " . $id);
+		return $this->_koneksi->query("DELETE FROM " . $this->_tabel . " WHERE id = " . $this->_idTabel);
 	}	
 }

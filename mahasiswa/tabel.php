@@ -39,8 +39,8 @@ $mahasiswas = $objMahasiswa->ambilSemuaData();
 					<td><?php echo date("d-m-Y", strtotime($mahasiswa['tanggal_lahir'])); ?></td>
 					<td><?php echo $mahasiswa['alamat']; ?></td>
 					<td>
-						<a href="">Ubah</a>
-						<a href="">Hapus</a>
+						<a href="ubah.php?id=<?php echo $mahasiswa['id']; ?>">Ubah</a>
+						<a href="hapus.php?id=<?php echo $mahasiswa['id']; ?>">Hapus</a>
 					</td>
 				</tr>
 				<?php
