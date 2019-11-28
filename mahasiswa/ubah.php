@@ -1,5 +1,8 @@
 <?php
 require_once '../model/Mahasiswa.php';
+
+$objectMahasiswa = new Mahasiswa();
+$mahasiswa = $objectMahasiswa->cari($_GET['id']);
 ?>
 
 <!DOCTYPE html>
@@ -16,21 +19,23 @@ require_once '../model/Mahasiswa.php';
 	</div>
 	<h2 style="text-align: center;">Mahasiswa</h2>
 
-	<form action="simpanubah.php" method="post">
+	<form action="simpan.php" method="post">
+		<input type="hidden" name="id" value="<?php echo $mahasiswa['id']; ?>">
+
 		<label>Nama</label>
-		<input type="text" name="nama" required>
+		<input type="text" name="nama" required value="<?php echo $mahasiswa['nama']; ?>">
 		<br>
 
 		<label>NPM</label>
-		<input type="number" name="npm" required>
+		<input type="number" name="npm" required value="<?php echo $mahasiswa['npm']; ?>">
 		<br>
 
 		<label>Tanggal Lahir</label>
-		<input type="date" name="tanggal_lahir" required>
+		<input type="date" name="tanggal_lahir" required value="<?php echo $mahasiswa['tanggal_lahir']; ?>">
 		<br>
 
 		<label>Alamat</label>
-		<textarea name="alamat" required></textarea>
+		<textarea name="alamat" required><?php echo $mahasiswa['alamat']; ?></textarea>
 		<br>
 
 		<input type="submit" value="Simpan">

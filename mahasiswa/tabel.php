@@ -12,7 +12,7 @@ $mahasiswas = $objMahasiswa->ambilSemuaData();
 </head>
 <body>
 	<div style="text-align: center;">
-		<b><a href="">Mahasiswa</a></b>
+		<b><a href="tabel.php">Mahasiswa</a></b>
 		<a href="">Siswa</a>
 		<a href="">Benda</a>
 		<a href="">Program Studi</a>
