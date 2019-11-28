@@ -30,7 +30,7 @@ class Mahasiswa Extends Model
 }
 
 $a = new Mahasiswa();
-$a->cari(2);
+// $a->cari(1);
 $a->nama = "Agun'\nssgDH";
 $a->npm = '15753003';
 $a->tanggal_lahir = '1997-03-25';

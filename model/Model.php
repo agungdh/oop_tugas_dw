@@ -27,12 +27,17 @@ class Model
 	{
 		
 		if ($this->_state == 'tambah') {
+			$rawColumns = [];
 			foreach ($this->_atribut as $key => $value) {
+				$rawColumns[] = $key;
+
 				$this->_atribut[$key] = "'" . mysqli_real_escape_string($this->_koneksi, $value) . "'";
 			}
-			$values = implode(',', $this->_atribut);
 
-			return $this->_koneksi->query("INSERT INTO " . $this->_tabel . " VALUES (null, " . $values . ")") or die(mysqli_error($this->_koneksi));
+			$values = implode(',', $this->_atribut);
+			$columns = implode(',', $rawColumns);
+
+			return $this->_koneksi->query("INSERT INTO " . $this->_tabel . " (" . $columns . ")" . " VALUES (" . $values . ")") or die(mysqli_error($this->_koneksi));
 		} elseif ($this->_state == 'ubah') {
 			$rawValues = [];
 			foreach ($this->_atribut as $key => $value) {
